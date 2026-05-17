@@ -18,5 +18,9 @@
                HorizontalTextAlignment="Center"
                TextColor="Black"/>
 
+        <Button Text="Voltar"
+        HorizontalOptions="Center"
+        Clicked="Button_Clicked"/>
+
     </VerticalStackLayout>
 </ContentPage>

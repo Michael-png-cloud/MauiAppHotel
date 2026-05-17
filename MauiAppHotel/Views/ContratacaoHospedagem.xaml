@@ -9,16 +9,27 @@
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="10"
                          Spacing="10">
+        
+        <Grid>
+            <Button Text="Fale Conosco" 
+                    TextColor="Black"
+                    WidthRequest="120"
+                    HorizontalOptions="Start"
+                    Clicked="Button_Clicked_1"
+            />
 
-        <Button Text="Sobre" 
-                TextColor="Black"
-                WidthRequest="100"
-                HorizontalOptions="EndAndExpand"
-                />
+            <Button Text="Sobre" 
+                    TextColor="Black"
+                    WidthRequest="100"
+                    HorizontalOptions="End"
+                    Clicked="Button_Clicked_2"
+                    />
+        </Grid>
 
         <Label Text="Cálculo da Diária"
                FontFamily="HabibiRegular"
-               FontSize="50"
+               FontAttributes="Bold"
+               FontSize="40"
                TextColor="{StaticResource Primary}" />
 
         <Frame>
@@ -64,7 +75,8 @@
                                TextColor="{StaticResource Primary}"/>
 
                         <Picker x:Name="pck_quarto"
-                                Title="Selecione sua Acomodação" />
+                                Title="Selecione sua Acomodação"
+                                ItemDisplayBinding="{Binding Descricao}"/>
                     </VerticalStackLayout>
                 </Frame>
 
@@ -80,6 +92,7 @@
                         <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-in:" />
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
@@ -91,7 +104,7 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar"  />
+                <Button Text="Avançar" Clicked="OnButtonClicked"/>
 
             </VerticalStackLayout>
         </Frame>

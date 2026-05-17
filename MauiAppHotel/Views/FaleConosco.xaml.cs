@@ -1,13 +1,14 @@
 namespace MauiAppHotel.Views;
 
-public partial class Sobre : ContentPage
+public partial class FaleConosco : ContentPage
 {
-	public Sobre()
+	public FaleConosco()
 	{
-		InitializeComponent();
+        InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+
+    private void Button_Clicked_1 (object sender, EventArgs e)
     {
         try
         {
@@ -18,4 +19,5 @@ public partial class Sobre : ContentPage
             DisplayAlert("Ops", ex.Message, "OK");
         }
     }
+
 }
